@@ -3,9 +3,9 @@
   "private": true,
   "scripts": {
     "postinstall": "playwright install",
-    "test": "playwright test"
+    "test": "playwright test --ui"
   },
   "devDependencies": {
-    "@playwright/test": "^1.28.1"
+    "@playwright/test": "^1.44.1"
   }
 }
