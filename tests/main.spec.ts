@@ -18,14 +18,9 @@ test("test", async ({ page }) => {
       .locator("section")
       .filter({ hasText: "Learn the story of your" })
       .getByLabel("Enter VIN numberEnter VIN")
-      .click();
-    await page
-      .locator("section")
-      .filter({ hasText: "Learn the story of your" })
-      .getByLabel("Enter VIN numberEnter VIN")
       .fill("SALLAAA146A396339");
 
-      await page.getByRole("button", { name: "Get report" }).first().click();
+    await page.getByRole("button", { name: "Get report" }).first().click();
   }
 
   async function selectReason() {
@@ -34,11 +29,17 @@ test("test", async ({ page }) => {
   }
 
   async function selectReportPackage() {
-    await page.locator('div').filter({ hasText: /^Check 3 cars-47%\$15\.99\/ reportYou pay \$47\.97\$89\.97$/ }).nth(2).click();
+    await page
+      .locator("div")
+      .filter({
+        hasText: /^Check 3 cars-47%\$15\.99\/ reportYou pay \$47\.97\$89\.97$/,
+      })
+      .nth(2)
+      .click();
   }
 
   async function getReport() {
-    await page.getByRole('link', { name: 'Get report' }).click();
+    await page.getByRole("link", { name: "Get report" }).click();
     await page.getByRole("link", { name: "Stay in US" }).click();
   }
 
@@ -81,7 +82,6 @@ test("test", async ({ page }) => {
 
     return parseFloat(initialPrice.replace("$", "").trim());
   }
-
   const priceBeforeVoucher = await getPrice();
 
   async function applyVoucher() {
@@ -90,7 +90,6 @@ test("test", async ({ page }) => {
     await page.getByPlaceholder("Voucher code").fill("qahomework");
     await page.getByRole("button", { name: "Apply" }).click();
   }
-
   await applyVoucher();
 
   async function validateDiscountPercentage() {
@@ -111,6 +110,5 @@ test("test", async ({ page }) => {
 
     expect(priceAfterVoucher.toFixed(2)).toBe(expectedPriceAfterVoucher);
   }
-  
   await validateDiscountPercentage();
 });
