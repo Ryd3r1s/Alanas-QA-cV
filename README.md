@@ -2,7 +2,7 @@
 
 ## Write a functional E2E automation test
 
-1. Clone this repository*
+1. Clone this repository\*
 2. Run `yarn` to install dependencies
 3. Write a test that will:
    1. Visit [carVertical](https://www.carvertical.com)
@@ -13,3 +13,9 @@
 4. Share a link to the repository where we can review the test
 
 \* This repo is set up to use [Playwright](https://playwright.dev), but you can use any framework you like as long as it uses TypeScript or JavaScript.
+
+### Running the Test
+
+To run the test, execute the following command in your terminal:
+
+yarn test
