@@ -1,21 +1,39 @@
-# Homework for QA Candidate
+# Alanas CV QA Homework
 
-## Write a functional E2E automation test
+This repository contains automated test scripts to validate the total price after applying a voucher on the carVertical website.
 
-1. Clone this repository\*
-2. Run `yarn` to install dependencies
-3. Write a test that will:
-   1. Visit [carVertical](https://www.carvertical.com)
-   2. In the VIN form, submit `SALLAAA146A396339` VIN
-   3. Once precheck has loaded, pick 3-report package
-   4. On the checkout page, apply `qahomework` voucher
-   5. **Validate that the total price is shown correctly**
-4. Share a link to the repository where we can review the test
+## Test Case
 
-\* This repo is set up to use [Playwright](https://playwright.dev), but you can use any framework you like as long as it uses TypeScript or JavaScript.
+1. Visit [carVertical](https://www.carvertical.com).
+2. In the VIN form, submit `SALLAAA146A396339` VIN.
+3. Once the precheck has loaded, pick the 3-report package.
+4. On the checkout page, apply `qahomework` voucher.
+5. Validate that the total price is shown correctly.
 
-### Running the Test
+## Running the Test
 
-To run the test, execute the following command in your terminal:
+To run the test, follow these steps:
 
-yarn test
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/Ryd3r1s/Alanas-QA-cV
+   ```
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   cd Alanas-QA-cV
+   ```
+
+3. **Install Dependencies**
+
+   ```bash
+   yarn install
+   ```
+
+4. **Run the Test**
+
+   ```bash
+   yarn test
+   ```
